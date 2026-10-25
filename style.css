@@ -12,3 +12,8 @@
 .image-open.tilting .zoom-hint{opacity:0}
 .image-stage:before,.image-stage:after{transition:transform .65s cubic-bezier(.2,1.35,.35,1),filter .65s ease,opacity .65s ease}
 .image-stage.shadow-dragging:before,.image-stage.shadow-dragging:after{transition:none}
+
+#viewer-stage{height:68dvh;position:relative;overflow:hidden;background:#d8d5cb;cursor:grab;touch-action:none;user-select:none;overscroll-behavior:contain}
+#viewer-stage.panning{cursor:grabbing}
+#viewer-stage #viewer-img{width:100%;height:100%;object-fit:contain;background:transparent;transform-origin:center;transition:none;pointer-events:none;-webkit-user-drag:none}
+@media(max-width:600px){#viewer-stage{height:60dvh}}
